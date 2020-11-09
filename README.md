@@ -1,4 +1,4 @@
-# gateway-php-api
+# cryptocore-payment-gateway-php-api
 
 Payment gateway: 
 http://merchant.ccore.online/
