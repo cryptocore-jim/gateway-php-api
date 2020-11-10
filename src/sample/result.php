@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-include ("../Api/CryptocoreCommunicator.php");
+include ("../Api/CryptoCoreCommunicator.php");
 include ("../Api/CryptoCoreValidatePost.php");
 
 $secretKey = "secretkey"; // Put your secret key here

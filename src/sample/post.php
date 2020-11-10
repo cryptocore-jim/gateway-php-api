@@ -16,20 +16,45 @@ $domain = "http://test-payment-domain";
 
 $id = $_GET["id"];
 $amount = 0;
-$currencyCode = "BTC_TST";
+$currencyCode = "";
+$paymentCurrencyCode = ""; //Empty - we do not use fiat now
 $orderId = uniqid();
 switch ($id) {
     case 1:
         $amount = 0.014;
+        $currencyCode = "BTC_TST";
         break;
     case 2:
         $amount = 0.0015;
+        $currencyCode = "BTC_TST";
         break;
     case 3:
         $amount = 0.0012;
+        $currencyCode = "BTC_TST";
         break;
     case 4:
         $amount = 0.001;
+        $currencyCode = "BTC_TST";
+        break;
+    case 5:
+        $amount = 14;
+        $currencyCode = "USD";
+        $paymentCurrencyCode = "BTC_TST";
+        break;
+    case 6:
+        $amount = 20;
+        $currencyCode = "USD";
+        $paymentCurrencyCode = "BTC_TST";
+        break;
+    case 7:
+        $amount = 10;
+        $currencyCode = "USD";
+        $paymentCurrencyCode = "BTC_TST";
+        break;
+    case 8:
+        $amount = 11.99;
+        $currencyCode = "USD";
+        $paymentCurrencyCode = "BTC_TST";
         break;
     default:
         header("location: index.php");;
@@ -39,9 +64,9 @@ switch ($id) {
 $newCommunicator = new CryptoCoreCommunicator();
 $newOrder = new CryptoCoreNewOrder();
 $newOrder->setAmount($amount); //Set amount to pay
-$newOrder->setCurrencyCode($currencyCode); //Set base Currency Code
+$newOrder->setCurrencyCode($currencyCode); //Set base Currency Code (BTC, LTC, BCH, USD, EUR ...)
 $newOrder->setOrderId($orderId); //Set your order ID
-$newOrder->setPaymentCurrencyCode(""); //Empty - we do not use fiat now
+$newOrder->setPaymentCurrencyCode($paymentCurrencyCode); //Payment currency code. Crypto if convert from fiat, Empty if crypto.
 $newOrder->setResultUrl($domain."/Sample/result.php"); // set result URL where Gateway sends report (optional)
 $newOrder->setUserReturnUrl($domain."/Sample/user_return.php"); // set result URL where usr will return after payment made (optional)
 $newOrder->setUserId($userId);
