@@ -144,7 +144,7 @@ $rate4 = $cryptoCoreRates->getRate($mainCurrency, $changeToCurrency, 11.99);
         <div class="row">
             <div class="col-md-3">
                 <div href="#" class="card card-product-grid">
-                    <span class="img-wrap"> <img src="./ui/1.jpg"> </span>
+                    <span class="img-wrap"> <img src="./ui/5.jpg"> </span>
                     <figcaption class="info-wrap">
                         <span class="title">Just another product name</span>
                         <div class="price mt-1">14 USD (<?php echo $rate1->amount." ".$rate1->to_currency; ?>) </div> <!-- price-wrap.// -->
@@ -154,7 +154,7 @@ $rate4 = $cryptoCoreRates->getRate($mainCurrency, $changeToCurrency, 11.99);
             </div> <!-- col.// -->
             <div class="col-md-3">
                 <div href="#" class="card card-product-grid">
-                    <span class="img-wrap"> <img src="./ui/2.jpg"> </span>
+                    <span class="img-wrap"> <img src="./ui/6.jpg"> </span>
                     <figcaption class="info-wrap">
                         <span class="title">Some item name here</span>
                         <div class="price mt-1">20 USD (<?php echo $rate2->amount." ".$rate2->to_currency; ?>)</div> <!-- price-wrap.// -->
@@ -164,7 +164,7 @@ $rate4 = $cryptoCoreRates->getRate($mainCurrency, $changeToCurrency, 11.99);
             </div> <!-- col.// -->
             <div class="col-md-3">
                 <div href="#" class="card card-product-grid">
-                    <span class="img-wrap"> <img src="./ui/3.jpg"> </span>
+                    <span class="img-wrap"> <img src="./ui/7.jpg"> </span>
                     <figcaption class="info-wrap">
                         <span class="title">Great product name here</span>
                         <div class="price mt-1">10 USD (<?php echo $rate3->amount." ".$rate3->to_currency; ?>)</div> <!-- price-wrap.// -->
@@ -174,7 +174,7 @@ $rate4 = $cryptoCoreRates->getRate($mainCurrency, $changeToCurrency, 11.99);
             </div> <!-- col.// -->
             <div class="col-md-3">
                 <div href="#" class="card card-product-grid">
-                    <span class="img-wrap"> <img src="./ui/4.jpg"> </span>
+                    <span class="img-wrap"> <img src="./ui/8.jpg"> </span>
                     <figcaption class="info-wrap">
                         <span class="title">Just another product name</span>
                         <div class="price mt-1">11.99 USD (<?php echo $rate4->amount." ".$rate4->to_currency; ?>)</div> <!-- price-wrap.// -->
