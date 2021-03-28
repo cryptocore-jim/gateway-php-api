@@ -2,11 +2,11 @@
 
 namespace CryptoCore\Api;
 
-class CryptoCoreGetOrder
+class CryptoCoreGetFaucet
 {
     private $usersignature;
-    private $user_id ;
-    private $payment_id;
+    private $user_id;
+    private $faucet_key;
 
     /**
      * @return mixed
@@ -37,29 +37,29 @@ class CryptoCoreGetOrder
      */
     public function setUserId($user_id)
     {
-        $this->user_id = intval($user_id);
+        $this->user_id = $user_id;
     }
 
     /**
      * @return mixed
      */
-    public function getPaymentId()
+    public function getFaucetKey()
     {
-        return $this->payment_id;
+        return $this->faucet_key;
     }
 
     /**
-     * @param mixed $payment_id
+     * @param mixed $faucet_key
      */
-    public function setPaymentId($payment_id)
+    public function setFaucetKey($faucet_key)
     {
-        $this->payment_id = $payment_id;
+        $this->faucet_key = $faucet_key;
     }
 
 
-    public function getOrderSignature($secretKey)
+    public function getFaucetSignature($secretKey)
     {
-        return sha1($this->getPaymentId() . $this->getUserId() . $secretKey);
+        return sha1($this->getFaucetKey() . $this->getUserId() . $secretKey);
     }
 
     public function getJson()

@@ -141,9 +141,9 @@ class CryptoCoreNewOrder
         $this->amount = $amount;
     }
 
-    public function newOrderSignature($secrectKey)
+    public function newOrderSignature($secretKey)
     {
-        return sha1($this->getCurrencyCode() . $this->getOrderId() . $this->getResultUrl() . $this->getUserReturnUrl() . $this->getUserId() . $this->getAmount() . $secrectKey);
+        return sha1($this->getCurrencyCode() . $this->getOrderId() . $this->getResultUrl() . $this->getUserReturnUrl() . $this->getUserId() . $this->getAmount() . $secretKey);
     }
 
     public function getJson()

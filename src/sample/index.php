@@ -26,7 +26,7 @@ $cryptoCoreExchange->setTo($changeToCurrency);
 $signature = $cryptoCoreExchange->newExchangeSignature($secretKey);
 $cryptoCoreExchange->setSignature($signature);
 $json = $cryptoCoreExchange->getJson();
-$result = $cryptoCoreCommunicator->sendGetExchnageRateRequest($json, 30);
+$result = $cryptoCoreCommunicator->sendGetExchangeRateRequest($json, 30);
 try {
     $cryptoCoreRates = new CryptoCoreRates($result);
 } catch (Exception $e) {

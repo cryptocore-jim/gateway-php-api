@@ -79,9 +79,9 @@ class CryptoCoreExchange
         return json_encode($vars);
     }
 
-    public function newExchangeSignature($secrectKey)
+    public function newExchangeSignature($secretKey)
     {
-        return sha1($this->user_id . $secrectKey);
+        return sha1($this->user_id . $secretKey);
     }
 
 };
