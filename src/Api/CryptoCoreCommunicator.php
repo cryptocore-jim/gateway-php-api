@@ -68,7 +68,7 @@ class CryptoCoreCommunicator
             $timeout = 30;
         }
 
-        $url = 'http://localhost:44300/request/faucet/new';
+        $url = 'https://gateway.ccore.online/request/faucet/new';
         $request_data = $jsonRequest;
 
         return $this->sendRequest($request_data, $url, $timeout);
